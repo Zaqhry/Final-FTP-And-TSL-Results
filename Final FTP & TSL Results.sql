@@ -10,7 +10,7 @@
 
 SELECT * 
 FROM TOTALFTP ftp
-	INNER JOIN TOTALTSL tsl
+INNER JOIN TOTALTSL tsl
 	ON ftp.session = tsl.session 
 
 --Most Profitable Confluences for each session FTP
@@ -19,9 +19,9 @@ SELECT DISTINCT(Session),
 		Confluence,
 		ProfitLossFTP
 FROM AUDJPY 
-GROUP BY Session,
-	 Confluence,
-	 ProfitLossFTP
+	GROUP BY Session,
+	         Confluence,
+	         ProfitLossFTP
 	ORDER BY 1,
 		 3 DESC
 
@@ -31,9 +31,9 @@ SELECT DISTINCT(Session),
 		Confluence,
 		ProfitLossTSL
 FROM AUDJPY 
-GROUP BY Session,
-	 Confluence,
-	 ProfitLossTSL
+	GROUP BY Session,
+	         Confluence,
+	         ProfitLossTSL
 	ORDER BY 1,
 		 3 DESC
 
